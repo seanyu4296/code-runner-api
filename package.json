@@ -5,7 +5,10 @@
     "code-runner-api": "bin/code-runner-api.js"
   },
   "scripts": {
+    "dev": "nodemon src/api/index.local.js",
     "build": "tsc",
+    "build:cdk": "rm -rf cdk-dist/ && tsc -p tsconfig.cdk.json",
+    "build:api": "ncc build src/api/index.prod.js --out api-dist --external aws-sdk ",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
@@ -14,14 +17,23 @@
     "@aws-cdk/assert": "1.42.0",
     "@types/jest": "^25.2.1",
     "@types/node": "10.17.5",
-    "jest": "^25.5.0",
-    "ts-jest": "^25.3.1",
     "aws-cdk": "1.42.0",
+    "jest": "^25.5.0",
+    "nodemon": "^2.0.4",
+    "ts-jest": "^25.3.1",
     "ts-node": "^8.1.0",
     "typescript": "~3.7.2"
   },
   "dependencies": {
+    "@aws-cdk/aws-apigateway": "1.42.0",
+    "@aws-cdk/aws-apigatewayv2": "1.42.0",
+    "@aws-cdk/aws-lambda": "1.42.0",
     "@aws-cdk/core": "1.42.0",
-    "source-map-support": "^0.5.16"
+    "aws-serverless-express": "^3.3.8",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "isolated-vm": "^3.3.5",
+    "source-map-support": "^0.5.16",
+    "vm2": "^3.9.2"
   }
 }

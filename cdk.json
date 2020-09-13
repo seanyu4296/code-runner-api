@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node bin/code-runner-api.ts",
+  "app": "node cdk-dist/index",
   "context": {
     "@aws-cdk/core:enableStackNameDuplicates": "true",
     "aws-cdk:enableDiffNoFail": "true"
