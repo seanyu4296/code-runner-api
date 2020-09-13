@@ -31,7 +31,7 @@ const app = new cdk.App();
 stages.forEach((stage) => {
   new CodeRunnerStack(app, `code-runner-${stage}`, {
     env: {
-      account: process.env.CDK_DEFAULT_ACCOUNT,
-      region: process.env.CDK_DEFAULT_REGION
+      account: "560397428138",
+      region: "ap-southeast-1"
   }});
 });
