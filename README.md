@@ -1,5 +1,5 @@
 ## Info
-1. A simple project that exposes an api to run js code and return logs in array and the value of the last executed line of code
+1. A simple project that exposes an api through (HTTP POST "/") to run js code and return console.log's in array and the value of the last executed line of code
    1. Sample request - `{ code: "let x = 1; console.log('hi'); x;" }`
    2. Async function sample - `{code: " async function x() { return 1;} (async () => { return await x();})();"`}
    3. Sample response - `{ logs: ['hi'], result: 1}`
