@@ -4,8 +4,8 @@
    2. Async function sample - `{code: " async function x() { return 1;} (async () => { return await x();})();"`}
    3. Sample response - `{ logs: ['hi'], result: 1}`
 2. Built using aws-cdk, typescript, nodejs, express, and isolated-vm
-   1. Used isolated-vm to run untrusted code securely in a different process using v8:Isolate feature
-      1. other choices were vm2, which fell short because it runs in the same process
+   1. Used isolated-vm to run untrusted code securely using v8:Isolate feature
+      1. other choices were vm2, which fell short
    2. Used aws-cdk and typescript to replicate, deploy and scale AWS infra easily
    3. Used simple javascript for fast prototyping
 
